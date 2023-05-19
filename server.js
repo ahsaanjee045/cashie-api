@@ -42,6 +42,9 @@ db.mongoose
     });
 
 // Define Routes
+app.get("/", (req, res) => {
+    res.send("hello")
+})
 require('./app/routes/user.route')(app);
 require('./app/routes/auth.route')(app);
 require('./app/routes/category.route')(app);
